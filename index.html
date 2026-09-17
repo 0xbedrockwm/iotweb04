@@ -1,57 +1,114 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wisanu Mangkala</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
     />
     <style>
       body {
         margin: 0;
-        min-height: 100vh;
-        background-color: black;
+        padding: 0;
+        background-color: #91ff82;
+        font-family: "Raleway", monospace;
+      }
+      .main {
+        display: flex;
+        margin: 80px 120px;
+        justify-content: center;
+        gap: 50px;
+      }
+      .sec-left p {
+        width: 500px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.5;
+        font-family: "raleway", monospace;
+      }
+
+      .tile {
+        font-size: 5.5rem;
+        font-weight: bold;
+        display: block;
+      }
+
+      body button {
+        background-color: #ff7f50;
         color: white;
-        font-family: "ibm plex mono", monospace;
+        border-radius: 100px;
+        padding: 15px 30px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .pic-1-2 {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .pic-1-2 img {
+        width: 500px;
+      }
+      .sec-center img,
+      .sec-right img {
+        height: 763px;
+      }
+      .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 40px;
-      }
-
-      h1 {
         font-size: 1.5rem;
-        margin: 0;
-      }
-
-      .links {
-        display: flex;
-        gap: 20px;
-      }
-
-      .links a {
-        color: white;
-        text-decoration: none;
-        border: 1px solid gray;
-        border-radius: 10px;
-        padding: 15px 30px;
-      }
-
-      .links a:hover {
-        color: greenyellow;
-        border-color: greenyellow;
+        margin-bottom: 100px;
       }
     </style>
   </head>
+
   <body>
-    <h1>Wisanu Mangkala</h1>
-    <div class="links">
-      <a href="page01.html">Page 1</a>
-      <a href="page02.html">Page 2</a>
-      <a href="page03.html">Page 3</a>
+    <!-- ส่วน main -->
+    <div class="main">
+      <!-- sec-left -->
+      <div class="sec-left">
+        <span class="tile">My Web Design by</span>
+        <span class="tile">HTML+React+TailwindCSS</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+          repudiandae, debitis rerum ut id amet maiores voluptatem tenetur
+          magnam saepe.
+        </p>
+        <button>Follow Me</button>
+        <div class="pic-1-2">
+          <a href="./page01.html">
+            <img src="./images/pic1.png" alt="pic1" />
+          </a>
+          <a href="./page02.html">
+            <img src="./images/pic2.png" alt="pic2" />
+          </a>
+        </div>
+      </div>
+
+      <!-- sec-center -->
+      <div class="sec-center">
+        <a href="./page03.html">
+          <img src="./images/pic3.png" alt="pic3" />
+        </a>
+      </div>
+
+      <!-- sec-right -->
+      <div class="sec-right">
+        <a href="./page04.html">
+          <img src="./images/pic4.png" alt="pic4" />
+        </a>
+      </div>
+    </div>
+
+    <!-- ส่วน footer -->
+    <div class="footer">
+      <span>Copyright © 2024 My Web Design by HTML+React+TailwindCSS</span>
+      <span>Created by Wisanu Mangkala</span>
     </div>
   </body>
 </html>
