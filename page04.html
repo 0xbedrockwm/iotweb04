@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0px;
+        background-color: white;
+        color: rgba(34, 34, 34);
+        font-family: "Poppins", sans-serif;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: rgba(205, 128, 72);
+      }
+
+      button {
+        background-color: rgba(176, 82, 42);
+        color: white;
+        padding: 12px 28px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgba(140, 60, 28);
+      }
+
+      .sec-title {
+        display: block;
+        text-align: center;
+        font-size: 45px;
+        font-style: italic;
+        font-family: "Sansita Swashed", sans-serif;
+        margin-bottom: 50px;
+      }
+
+      .hero-content-wrapper {
+        position: relative;
+        height: 650px;
+        background-color: rgba(20, 20, 20);
+        overflow: hidden;
+      }
+
+      .hero-img {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scaleX(-1);
+      }
+
+      .nav-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+      }
+
+      #logo {
+        width: 110px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 30px;
+        font-size: 14px;
+      }
+
+      .nav-icons {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-icons i {
+        font-size: 20px;
+      }
+
+      .main-hero-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 100px 100px;
+        color: white;
+      }
+
+      .sub-title {
+        font-size: 18px;
+        color: rgba(205, 128, 72);
+      }
+
+      .main-title {
+        margin: 0px;
+        font-size: 70px;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 1.2;
+        font-family: "Sansita Swashed", sans-serif;
+      }
+
+      .cta-buttons {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+      .btn-learn {
+        font-size: 14px;
+      }
+
+      .containe2 {
+        padding: 80px 150px;
+      }
+
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 360px;
+        height: 411px;
+        padding: 25px;
+        background-color: rgba(28, 28, 28);
+        background-image: url(./images/image1.png);
+        background-size: 350%;
+        background-position: right center;
+        border-radius: 8px;
+        color: white;
+        box-sizing: border-box;
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: contain;
+        margin-bottom: auto;
+      }
+
+      .product-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      .product-price {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .product-head i {
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .product-head i:hover {
+        color: rgba(205, 128, 72);
+      }
+
+      .product-foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .product-name {
+        font-size: 16px;
+        line-height: 1.4;
+      }
+
+      .product-foot button {
+        padding: 8px 20px;
+        font-size: 12px;
+      }
+
+      .containe3 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 240px;
+        background-image: url(./images/image2.png);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .promo-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .promo-title {
+        font-size: 35px;
+        font-style: italic;
+        color: rgba(176, 82, 42);
+        line-height: 1.2;
+        font-family: "Sansita Swashed", sans-serif;
+      }
+
+      .containe4 {
+        padding: 80px 150px;
+      }
+
+      .sec-title-4 {
+        margin-bottom: 20px;
+      }
+
+      .explore-menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .explore-menu a {
+        color: rgba(120, 120, 120);
+        font-size: 14px;
+        padding-bottom: 5px;
+      }
+
+      .explore-menu a:hover,
+      .explore-menu .active {
+        color: rgba(34, 34, 34);
+        border-bottom: 2px solid rgba(176, 82, 42);
+      }
+
+      .explore-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      .explore-list img {
+        width: 310px;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .explore-list img:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+      }
+
+      .containe5 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 380px;
+        background-color: rgba(20, 20, 20);
+        overflow: hidden;
+      }
+
+      .about-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+        opacity: 0.5;
+        transform: scaleX(-1);
+      }
+
+      .about-box {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 450px;
+        text-align: center;
+        color: white;
+      }
+
+      .about-title {
+        font-size: 40px;
+        font-style: italic;
+        font-family: "Sansita Swashed", sans-serif;
+      }
+
+      .about-box p {
+        margin: 0px;
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(220, 220, 220);
+      }
+
+      .containe6 {
+        padding: 80px 150px;
+      }
+
+      .featured-list {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .featured-item {
+        width: 250px;
+      }
+
+      .featured-item img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .featured-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .featured-info span:last-child {
+        color: rgba(176, 82, 42);
+      }
+
+      .containe7 {
+        background-color: rgba(20, 20, 20);
+        color: white;
+        padding: 30px 150px 20px;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .footer-top img {
+        width: 110px;
+      }
+
+      .follow {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 14px;
+      }
+
+      .follow a i {
+        display: flex;
+        width: 32px;
+        height: 32px;
+        border: 1px solid white;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+      }
+
+      .follow a i:hover {
+        background-color: rgba(176, 82, 42);
+        border: 1px solid rgba(176, 82, 42);
+      }
+
+      .footer-main {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 30px 0px;
+      }
+
+      .footer-col {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 14px;
+        color: rgba(200, 200, 200);
+      }
+
+      .footer-col a {
+        color: rgba(200, 200, 200);
+      }
+
+      .footer-head {
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      .news-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .news-item img {
+        width: 70px;
+        height: 55px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+
+      .news-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .news-date {
+        font-size: 12px;
+        color: rgba(205, 128, 72);
+      }
+
+      .footer-copy {
+        text-align: center;
+        font-size: 12px;
+        color: rgba(160, 160, 160);
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ส่วนที่ 1 -->
+    <div class="hero-content-wrapper">
+      <img class="hero-img" src="./images/image1.png" alt="" />
+      <div class="nav-bar">
+        <img id="logo" src="./images/modrino.png" alt="Keithston Logo" />
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Services</a>
+        </div>
+        <div class="nav-icons">
+          <a href="#"><i class="bi bi-search"></i></a>
+          <a href="#"><i class="bi bi-cart3"></i></a>
+        </div>
+      </div>
+
+      <div class="main-hero-text">
+        <span class="sub-title">Delicious Cafe</span>
+        <h1 class="main-title">Sweet Treats,<br />Perfect Eats</h1>
+        <div class="cta-buttons">
+          <button class="btn-shop">Shop Now</button>
+          <a href="#" class="btn-learn">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ส่วนที่ 2 -->
+    <div class="containe2">
+      <span class="sec-title">Top Products</span>
+
+      <div class="product-list">
+        <div class="product-card">
+          <img src="./images/b1.png" alt="" />
+          <div class="product-head">
+            <span class="product-price">40 Baht</span>
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="product-foot">
+            <span class="product-name">Whole Grain<br />Bread</span>
+            <button>Add</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/b2.png" alt="" />
+          <div class="product-head">
+            <span class="product-price">40 Baht</span>
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="product-foot">
+            <span class="product-name">Whole Grain<br />Bread</span>
+            <button>Add</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/b3.png" alt="" />
+          <div class="product-head">
+            <span class="product-price">40 Baht</span>
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="product-foot">
+            <span class="product-name">Whole Grain<br />Bread</span>
+            <button>Add</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/b4.png" alt="" />
+          <div class="product-head">
+            <span class="product-price">40 Baht</span>
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="product-foot">
+            <span class="product-name">Whole Grain<br />Bread</span>
+            <button>Add</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/b5.png" alt="" />
+          <div class="product-head">
+            <span class="product-price">40 Baht</span>
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="product-foot">
+            <span class="product-name">Whole Grain<br />Bread</span>
+            <button>Add</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="./images/b6.png" alt="" />
+          <div class="product-head">
+            <span class="product-price">40 Baht</span>
+            <i class="bi bi-info-circle"></i>
+          </div>
+          <div class="product-foot">
+            <span class="product-name">Whole Grain<br />Bread</span>
+            <button>Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ส่วนที่ 3 -->
+    <div class="containe3">
+      <div class="promo-box">
+        <span class="promo-title">20% Off Your<br />First Order</span>
+        <button>Learn More</button>
+      </div>
+    </div>
+
+    <!-- ส่วนที่ 4 -->
+    <div class="containe4">
+      <span class="sec-title sec-title-4">Explore More</span>
+
+      <div class="explore-menu">
+        <a href="#" class="active">Cake</a>
+        <a href="#">Muffins</a>
+        <a href="#">Croissant</a>
+        <a href="#">Bread</a>
+        <a href="#">Tart</a>
+        <a href="#">Favorite</a>
+      </div>
+
+      <div class="explore-list">
+        <img src="./images/d1.png" alt="" />
+        <img src="./images/d2.png" alt="" />
+        <img src="./images/d3.png" alt="" />
+        <img src="./images/d4.png" alt="" />
+        <img src="./images/d5.png" alt="" />
+        <img src="./images/d6.png" alt="" />
+      </div>
+    </div>
+
+    <!-- ส่วนที่ 5 -->
+    <div class="containe5">
+      <img class="about-bg" src="./images/image1.png" alt="" />
+      <div class="about-box">
+        <span class="about-title">About us</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+          repudiandae, debitis rerum ut id amet maiores voluptatem tenetur
+          magnam saepe.
+        </p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <!-- ส่วนที่ 6 -->
+    <div class="containe6">
+      <span class="sec-title">Featured Treats</span>
+
+      <div class="featured-list">
+        <div class="featured-item">
+          <img src="./images/d7.png" alt="" />
+          <div class="featured-info">
+            <span>Puff Pastry</span>
+            <span>$ 5</span>
+          </div>
+        </div>
+
+        <div class="featured-item">
+          <img src="./images/d8.png" alt="" />
+          <div class="featured-info">
+            <span>Doughnuts</span>
+            <span>$ 3</span>
+          </div>
+        </div>
+
+        <div class="featured-item">
+          <img src="./images/d9.png" alt="" />
+          <div class="featured-info">
+            <span>Brownies</span>
+            <span>$ 4</span>
+          </div>
+        </div>
+
+        <div class="featured-item">
+          <img src="./images/d10.png" alt="" />
+          <div class="featured-info">
+            <span>Fruit Tart</span>
+            <span>$ 6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ส่วนที่ 7 -->
+    <div class="containe7">
+      <div class="footer-top">
+        <img src="./images/modrino.png" alt="Keithston Logo" />
+        <div class="follow">
+          <span>Follow us</span>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-main">
+        <div class="footer-col">
+          <span class="footer-head">About Us</span>
+          <span>(123) 456-7890</span>
+          <span>info@keithston.com</span>
+          <span>123 Phetkasem Road<br />Nongkham Bangkok 10160</span>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-head">Explore</span>
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Services</a>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-head">Recent News</span>
+          <div class="news-item">
+            <img src="./images/d11.png" alt="" />
+            <div class="news-text">
+              <span class="news-date">Sep 27, 2026</span>
+              <a href="#">Puff pastry for<br />your breakfast</a>
+            </div>
+          </div>
+          <div class="news-item">
+            <img src="./images/d7.png" alt="" />
+            <div class="news-text">
+              <span class="news-date">Sep 20, 2026</span>
+              <a href="#">Puff pastry for<br />your breakfast</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <span>© 2026 Keithston Bakery. All rights reserved.</span>
+      </div>
+    </div>
+  </body>
+</html>
